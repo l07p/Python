@@ -52,15 +52,15 @@ class Konto:
             self.UmsatzHeute, self.MaxTagesumsatz))
 
 
+if __name__ == "__main__":
+    k1 = Konto("Heinz Meier", 567123, 12350.0)
+    k2 = Konto("Erwin Schmidt", 396754, 15000.0)
 
-k1 = Konto("Heinz Meier", 567123, 12350.0)
-k2 = Konto("Erwin Schmidt", 396754, 15000.0)
+    k1.geldtransfer(k2, 160)
+    k2.geldtransfer(k1, 1000)
+    k2.geldtransfer(k1, 500)
+    k2.einzahlen(500)
 
-k1.geldtransfer(k2, 160)
-k2.geldtransfer(k1, 1000)
-k2.geldtransfer(k1, 500)
-k2.einzahlen(500)
-
-k1.zeige()
-k2.zeige()
+    k1.zeige()
+    k2.zeige()
 
