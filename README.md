@@ -1,2 +1,3 @@
 # pythonLearning
-python learning
+Python
+This repositroy treats with all about Python
