@@ -13,4 +13,4 @@ class cls_DB:
 
 if __name__ == "__main__":
     anyDB = cls_DB('C:\tmp\sample','mdb')
-    print 'hello.'
+    print(hello.)
