@@ -1,0 +1,20 @@
+name: File Update Workflow
+
+on:
+  push:
+    paths:
+      - src/hellocalculator.py  # Trigger on specific file update
+  workflow_dispatch:            # Allow manual triggering
+
+jobs:
+  save-file:
+    runs-on: self-hosted  # Use your self-hosted runner
+
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v3
+
+      - name: Copy updated file to target directory
+        run: |
+          mkdir -p /home/runner/github/workfiles
+          cp src/hellocalculator.py /home/runner/github/workfiles
