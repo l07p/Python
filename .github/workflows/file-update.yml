@@ -3,7 +3,7 @@ name: File Update Workflow
 on:
   push:
     paths:
-      - src/hellocalculator.py  # Trigger on specific file update
+      - src/calculator/hello_calculator.py  # Trigger on specific file update
   workflow_dispatch:            # Allow manual triggering
 
 jobs:
@@ -16,5 +16,5 @@ jobs:
 
       - name: Copy updated file to target directory
         run: |
-          mkdir -p /home/runner/github/workfiles
-          cp src/hellocalculator.py /home/runner/github/workfiles
+          mkdir -p /home/ubuntu/runner/workfiles
+          cp src/calculator/hello_calculator.py /home/ubuntu/runner/workfiles/
