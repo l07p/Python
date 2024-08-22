@@ -6,7 +6,7 @@ name: Python application
 on:
   push:
     paths:
-      - src
+      - src/calculator/hello_calculator.py
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
