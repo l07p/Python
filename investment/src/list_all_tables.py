@@ -1,6 +1,6 @@
 import psycopg2
 
-def list_table_contents():
+def list_all_tables():
     try:
         # Establish the database connection
         conn = psycopg2.connect(
@@ -40,4 +40,4 @@ def list_table_contents():
         conn.close()
 
 if __name__ == "__main__":
-    list_table_contents()
+    list_all_tables()
